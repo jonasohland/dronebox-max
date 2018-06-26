@@ -1,0 +1,16 @@
+0, nothing NONE 0. 1.;
+1, parent::jo.granular.control::grain_freq GRAIN_FREQ 0. 1000.;
+2, parent::jo.granular.control::grain_start GRAIN_POS 0. 1000.;
+3, parent::jo.granular.control::grain_spray GRAIN_SPRAY 0. 1000.;
+4, parent::jo.granular.control::grain_stereo GRAIN_STEREO 0. 1000.;
+5, parent::jo.granular.control::grain_pitch GRAIN_PITCH 0. 1000.;
+6, parent::jo.lfo::freq LFO1_FREQ 0. 5.;
+7, parent::jo.lfo::phase LFO1_phase 0. 5.;
+8, parent::jo.fm::pitch_fm_freq FM_FREQ 0. 1000.;
+9, parent::jo.fm::pitch_fm_freq FM_AMT 0. 1000.;
+10, parent::jo.filter::filter_freq FILTER_FREQ 0. 1000.;
+11, parent::jo.filter::filter_res FILTER_RES 0. 1000.;
+12, presetcaller1 PRESET1 0.001 0.999;
+13, presetcaller2 PRESET2 0.001 0.999;
+14, multicallx MULTIPRESET_X 0.001 0.999;
+15,	multically MULTIPRESET_Y 0.001 0.999;

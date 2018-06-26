@@ -1,0 +1,118 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 7,
+			"minor" : 3,
+			"revision" : 3,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"rect" : [ 64.0, 145.0, 719.0, 585.0 ],
+		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 10.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Arial Bold",
+		"gridonopen" : 2,
+		"gridsize" : [ 15.0, 15.0 ],
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
+		"boxes" : [ 			{
+				"box" : 				{
+					"code" : "\r\nexpA(x0)\t\t\t\t\t\t\t\t\t// approx exp(x) (more accurate than 'fastexp()')\n{\n\tx = 0.999996 + (0.031261316 + (0.00048274797 + 0.000006 * x0) * x0) * x0;\n\tx *= x; x *= x; x *= x; x *= x; x *= x;\n\treturn x;\n}\r\n\r\ntauA(t)\t\t\t\t\t\t\t\t\t\t// approximate 'exp(-1 / (t * samplerate))'\n{\n\ty = expA(-1 / (t * samplerate));\n\treturn y + 0.000128;\t\t\t\t\t// approximation has excellent accuracy above...\n}\t\t\t\t\t\t\t\t\t\t\t// ...0.01 seconds (10 milliseconds) input\n\nexpsmooth(x, t)\t\t\t\t\t\t\t\t// t is smooth time in seconds\n{\n\tHistory w(0);\n\tz = tauA(t);\n\ty = (z * w) + (x * (1 - z));\n\tw = y;\n\treturn y;\n}\n\r\n// smooth time in seconds\r\nParam\tsmooth(0.022666, min=0.000033, max=15.11715);\r\n\r\n// smoothing filter\r\nout1\t= expsmooth(in1, smooth);\r\n",
+					"fontface" : 0,
+					"fontname" : "Arial Bold",
+					"fontsize" : 10.0,
+					"id" : "obj-2",
+					"maxclass" : "codebox",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 28.0, 63.0, 661.0, 461.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"ignoreclick" : 1,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 28.0, 541.0, 119.0, 20.0 ],
+					"style" : "",
+					"text" : "out 1 smoothed output"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"ignoreclick" : 1,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 28.0, 26.0, 125.0, 20.0 ],
+					"style" : "",
+					"text" : "in 1 input for smoothing"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 236.5, 26.0, 244.0, 18.0 ],
+					"style" : "",
+					"text" : "Surreal Machines exp smoother",
+					"textjustification" : 1
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+ ]
+	}
+
+}
