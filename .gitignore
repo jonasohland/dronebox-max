@@ -1,4 +1,6 @@
-media/
 externals/
 other/
 .DS_Store
+*.wav
+*.mp3
+*.aif
