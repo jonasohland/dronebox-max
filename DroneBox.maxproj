@@ -1,9 +1,9 @@
 {
 	"name" : "DroneBox",
 	"version" : 1,
-	"creationdate" : -697166467,
-	"modificationdate" : -695933818,
-	"viewrect" : [ 810.0, 174.0, 300.0, 500.0 ],
+	"creationdate" : -697166588,
+	"modificationdate" : 3614001304,
+	"viewrect" : [ 1622.0, 390.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -27,6 +27,11 @@
 			}
 ,
 			"jo.delay.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"jo.midimap.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -58,6 +63,10 @@
 		"data" : 		{
 
 		}
+,
+		"other" : 		{
+
+		}
 
 	}
 ,
@@ -73,6 +82,5 @@
 	"amxdtype" : 1633771873,
 	"readonly" : 0,
 	"devpathtype" : 0,
-	"devpath" : ".",
-	"sortmode" : 0
+	"devpath" : "."
 }
