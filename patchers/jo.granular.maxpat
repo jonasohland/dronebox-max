@@ -3624,7 +3624,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"workspacedisabled" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -3954,9 +3953,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 75.666634, 498.0, 241.0, 22.0 ],
+					"patching_rect" : [ 75.666634, 498.0, 336.0, 22.0 ],
 					"style" : "",
-					"text" : "poly~ jo.grain 10 @midimode 0 @parallel 1",
+					"text" : "poly~ jo.8grain 10 @midimode 0 @parallel 1 @threadcount 4",
 					"varname" : "poly~"
 				}
 
@@ -3972,7 +3971,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
-					"midpoints" : [ 196.166634, 536.0, 197.166626, 536.0 ],
+					"midpoints" : [ 243.666634, 536.0, 197.166626, 536.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
