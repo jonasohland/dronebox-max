@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 84.0, 300.0, 1814.0, 989.0 ],
+		"rect" : [ 34.0, 77.0, 1852.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,44 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1242.0, 599.0, 41.0, 22.0 ],
+					"style" : "",
+					"text" : "dbtoa"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 5,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1242.0, 510.0, 131.0, 22.0 ],
+					"style" : "",
+					"text" : "zmap 0 16383 -90. 12."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1194.0, 662.0, 101.0, 22.0 ],
+					"style" : "",
+					"text" : "s rev_send_level"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-53",
 					"maxclass" : "newobj",
@@ -198,14 +236,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1432.0, 477.0, 278.0, 22.0 ],
-					"restore" : [ 776 ],
+					"restore" : [ 885 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
 					"style" : "",
 					"text" : "pattr @bindto parent::jo.granular.control::grain_vol",
-					"varname" : "u793009797"
+					"varname" : "u153000409"
 				}
 
 			}
@@ -217,14 +255,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1432.0, 411.0, 337.0, 22.0 ],
-					"restore" : [ 805 ],
+					"restore" : [ 831 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
 					"style" : "",
 					"text" : "pattr @bindto parent::jo.granular.control::master_vol",
-					"varname" : "u583009795"
+					"varname" : "u358000411"
 				}
 
 			}
@@ -237,7 +275,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 278.0, 159.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "1 105"
+					"text" : "79 0"
 				}
 
 			}
@@ -338,7 +376,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.scan::s_scan_speed",
-									"varname" : "u339009781"
+									"varname" : "u828000414"
 								}
 
 							}
@@ -409,7 +447,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.noise::noise2_smooth",
-									"varname" : "u769009790"
+									"varname" : "u476000416"
 								}
 
 							}
@@ -428,7 +466,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.noise::noise2_rate",
-									"varname" : "u934009788"
+									"varname" : "u054000418"
 								}
 
 							}
@@ -447,7 +485,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.noise::noise1_smooth",
-									"varname" : "u398009786"
+									"varname" : "u591000420"
 								}
 
 							}
@@ -466,7 +504,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.lfo3::freq",
-									"varname" : "u542009784"
+									"varname" : "u938000422"
 								}
 
 							}
@@ -511,7 +549,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.noise::noise1_rate",
-									"varname" : "u350009782"
+									"varname" : "u012000424"
 								}
 
 							}
@@ -530,7 +568,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.lfo::freq",
-									"varname" : "u822009921"
+									"varname" : "u016000426"
 								}
 
 							}
@@ -555,14 +593,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 22.0, 190.0, 214.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 1.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::lfo1::freq",
-									"varname" : "u828009919"
+									"varname" : "u352000428"
 								}
 
 							}
@@ -867,7 +905,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.scan::s_scan_enable",
-									"varname" : "u333009909"
+									"varname" : "u164000439"
 								}
 
 							}
@@ -886,7 +924,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.filter::filter_mode",
-									"varname" : "u896009907"
+									"varname" : "u877000441"
 								}
 
 							}
@@ -898,14 +936,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 491.5, 438.0, 275.0, 22.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 1 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.filter::filter_enable",
-									"varname" : "u371009902"
+									"varname" : "u254000443"
 								}
 
 							}
@@ -924,7 +962,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.fm::pitch_fm_on",
-									"varname" : "u460009888"
+									"varname" : "u480000445"
 								}
 
 							}
@@ -943,7 +981,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.noise::noise_enable",
-									"varname" : "u080009900"
+									"varname" : "u508000447"
 								}
 
 							}
@@ -962,7 +1000,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.lfo3::lfo3_enable",
-									"varname" : "u394009898"
+									"varname" : "u281000449"
 								}
 
 							}
@@ -981,7 +1019,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.lfo::lfo_enable",
-									"varname" : "u781009896"
+									"varname" : "u367000451"
 								}
 
 							}
@@ -1000,7 +1038,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::lfo1::lfo_enable",
-									"varname" : "u657009894"
+									"varname" : "u674000453"
 								}
 
 							}
@@ -1355,14 +1393,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 315.0, 110.0, 317.0, 22.0 ],
-									"restore" : [ 59.0 ],
+									"restore" : [ 19.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::g_voices",
-									"varname" : "u758009879"
+									"varname" : "u930000457"
 								}
 
 							}
@@ -1387,14 +1425,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 286.0, 195.0, 346.0, 22.0 ],
-									"restore" : [ 60.0 ],
+									"restore" : [ 53.379845 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::g_center_note",
-									"varname" : "u596009885"
+									"varname" : "u776000459"
 								}
 
 							}
@@ -1439,7 +1477,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::g_start_mod_amt",
-									"varname" : "u780009883"
+									"varname" : "u639000461"
 								}
 
 							}
@@ -1458,7 +1496,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::g_end_mod_amt",
-									"varname" : "u033009881"
+									"varname" : "u102000463"
 								}
 
 							}
@@ -1502,7 +1540,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::grain_pitch",
-									"varname" : "u719009871"
+									"varname" : "u144000465"
 								}
 
 							}
@@ -1527,14 +1565,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 102.0, 366.0, 332.0, 22.0 ],
-									"restore" : [ 233 ],
+									"restore" : [ 97 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::grain_spray",
-									"varname" : "u032009877"
+									"varname" : "u485000467"
 								}
 
 							}
@@ -1566,20 +1604,21 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::g_freq_mod_amt",
-									"varname" : "u404009875"
+									"varname" : "u357000469"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-12",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 209.0, 197.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0."
+									"text" : "390.587804"
 								}
 
 							}
@@ -1604,14 +1643,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 18.0, 240.0, 324.0, 22.0 ],
-									"restore" : [ 548 ],
+									"restore" : [ 390 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.granular.control::grain_freq",
-									"varname" : "u799009873"
+									"varname" : "u857000471"
 								}
 
 							}
@@ -4469,7 +4508,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 5.0, 127.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0"
+									"text" : "16125"
 								}
 
 							}
@@ -4599,7 +4638,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.delay::feedback",
-									"varname" : "u858009955"
+									"varname" : "u871000529"
 								}
 
 							}
@@ -4624,14 +4663,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 974.0, 152.0, 238.0, 22.0 ],
-									"restore" : [ 605 ],
+									"restore" : [ 616 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.delay::time",
-									"varname" : "u665009953"
+									"varname" : "u945000531"
 								}
 
 							}
@@ -4663,7 +4702,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.fm::pitch_fm_mod_amt_1",
-									"varname" : "u749009951"
+									"varname" : "u373000533"
 								}
 
 							}
@@ -4688,14 +4727,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 631.400024, 152.0, 302.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 0.581578 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.filter::filter_mod_amt_1",
-									"varname" : "u701009949"
+									"varname" : "u508000535"
 								}
 
 							}
@@ -4720,14 +4759,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 86.400024, 187.0, 272.0, 22.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 984 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.fm::pitch_fm_amt",
-									"varname" : "u120009947"
+									"varname" : "u983000537"
 								}
 
 							}
@@ -4752,14 +4791,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 66.0, 152.0, 273.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 359.457975 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.fm::pitch_fm_freq",
-									"varname" : "u639009945"
+									"varname" : "u893000539"
 								}
 
 							}
@@ -4784,14 +4823,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 384.400024, 187.0, 255.0, 22.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 272 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.filter::filter_res",
-									"varname" : "u547009943"
+									"varname" : "u633000541"
 								}
 
 							}
@@ -4816,14 +4855,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 364.0, 152.0, 259.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 70.866142 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.filter::filter_freq",
-									"varname" : "u062009941"
+									"varname" : "u891000543"
 								}
 
 							}
@@ -5123,14 +5162,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 722.0, 228.0, 302.0, 22.0 ],
-									"restore" : [ 114.044297 ],
+									"restore" : [ 300.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::amp_env_release",
-									"varname" : "u332009923"
+									"varname" : "u446000550"
 								}
 
 							}
@@ -5142,14 +5181,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 459.0, 302.0, 300.0, 22.0 ],
-									"restore" : [ 0.204724 ],
+									"restore" : [ 0.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::amp_env_sustain",
-									"varname" : "u137009932"
+									"varname" : "u066000552"
 								}
 
 							}
@@ -5161,14 +5200,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 319.0, 372.0, 294.0, 22.0 ],
-									"restore" : [ 34.904801 ],
+									"restore" : [ 4.799103 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::amp_env_decay",
-									"varname" : "u401009930"
+									"varname" : "u402000554"
 								}
 
 							}
@@ -5193,14 +5232,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 132.0, 276.0, 294.0, 22.0 ],
-									"restore" : [ 34.904801 ],
+									"restore" : [ 6.833097 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::amp_env_attack",
-									"varname" : "u606009928"
+									"varname" : "u507000556"
 								}
 
 							}
@@ -5447,14 +5486,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 722.0, 228.0, 262.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 0.456038 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::f_env_amt",
-									"varname" : "u240007291"
+									"varname" : "u130000564"
 								}
 
 							}
@@ -5466,14 +5505,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 687.0, 276.0, 280.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 0.322835 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::f_env_sustain",
-									"varname" : "u524007292"
+									"varname" : "u778000566"
 								}
 
 							}
@@ -5485,14 +5524,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 443.0, 242.0, 274.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 25.72019 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::f_env_decay",
-									"varname" : "u122010060"
+									"varname" : "u981000568"
 								}
 
 							}
@@ -5517,14 +5556,14 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 132.0, 276.0, 274.0, 22.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 19.427666 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::parent::jo.env::f_env_attack",
-									"varname" : "u280010052"
+									"varname" : "u435000570"
 								}
 
 							}
@@ -5791,7 +5830,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 852.25, 489.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "63 0"
+					"text" : "62 0"
 				}
 
 			}
@@ -5983,6 +6022,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-2", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-22", 0 ],
 					"source" : [ "obj-2", 7 ]
 				}
@@ -6029,6 +6082,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-29", 0 ]
 				}
 
 			}
