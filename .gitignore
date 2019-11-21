@@ -1,5 +1,5 @@
-externals/
-other/
+DroneBox/externals/
+DroneBox/other/
 .DS_Store
 *.wav
 *.mp3
